@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Media Game</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Brawler|Indie Flower|Comic Sans|Economica' rel='stylesheet'>
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/main.css">
+
+</head>
+<body style="background-color: black;">
+
+<div class="container" id="sadrzaj1">
+	<header>
+	<div class="text-center">
+		<small class="text-success">
+			Vaš status:
+		</small><br>
+		<small>
+			Stažista: 10 points (10/500)<br>
+			Email: stažista@example.com
+		</small>
+	</div>
+	<br>
+		<div class="row">
+			<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+			<br>
+				<h5 class="naslov">Drugi zadatak - Izvori</h5><br>
+			</div>
+			<div class="col-6 col-sm-6 col-md-6 col-lg-6 ">
+				<h1 class="ime-igre text-right"><a href="../homepage.html">FactChecker</a></h1>
+			</div>
+		</div>			
+	</header>
+			
+	<section>
+		<div class="card">
+			<div class="card-header">
+				<h6 class="card-title">
+				<a href="#" id="procitaj">Pročitaj mail</a>
+				</h6>
+			</div>
+			<div class="card-body">
+				<table class="table">
+					<tbody>
+						<tr>
+							<td colspan="2"><span><i id="mail" class="fa"></i> Od: </span></td>
+							<td colspan="2"><span>UREDNIK</span></td>
+						</tr>
+						<tr>
+							<td colspan="2"><span><i id="user" class="fa" aria-hidden="true"></i> Prima: </span></td>
+							<td colspan="2"><span>Stažista</span></td>			
+						</tr>
+						<tr>
+							<td colspan="2"><span><i id="folder" class="fa" aria-hidden="true"></i> Predmet: </span></td>
+							<td colspan="2"><span>Drugi Zadatak.</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<hr>
+				<p>
+					Pozdrav, <br>
+					Pokazao/la si zavidne vještine verifikacije fotografija. Svaka čast. No, ne zaboravi da pored sadržaja, jedan od elemenata na koje trebaš obratiti pažnju jeste i izvor tog sadržaja. S tim u vezi, šaljem ti link na novi članak. Zvuči interesantno i mogli bismo dobiti dosta posjeta. <br>Provjeri da li je kredibilan izvor i objavi. 
+				<a href="#">http://www.njuz.net/srbija-salje-na-kosovo-voz-oslikan-cestitkama-haradinaju/</a>
+				</p>
+				<hr>
+				<figure class="figure">
+						<img src="../images/Screenshot_2017-09-11_09-04.png" alt="" class="figure-img img-fluid rounded" width="500px">
+				</figure>
+			</div>
+		</div>
+	</section>
+
+	<section id="odgovor">
+		<article>
+			<div class="pitanje">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+						<button type="button" class="btn btn-primary" id="da" data-toggle="modal" data-target="#kredibilan" onclick="tacnoK();playTacno();">Izvor je kredibilan.</button>
+						<audio id="tacno"></audio>
+						<!-- Modal -->
+						<div class="modal fade" id="kredibilan" tabindex="-1" role="dialog" aria-labelledby="kredibilanOdg" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="kredibilanOdg">FactChecker</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+								<div id="kredibilanOdgovor"></div>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+						       <button type="button" class="btn btn-primary nastavi">
+						        	<a href="#">Nastavi</a>
+						        </button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+
+						<button type="button" class="btn btn-danger" id="ne" data-toggle="modal" data-target="#nijeKredibilan" onclick="pogresnoK();playPogresno();">Izvor nije kredibilan.</button>
+						<audio id="pogresno"></audio>
+						<!-- Modal -->
+						<div class="modal fade" id="nijeKredibilan" tabindex="-1" role="dialog" aria-labelledby="nijekredibilanOdg" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="nijekredibilanOdg">FactChecker</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+								<div id="nijeKredibilanOdgovor"></div>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+						       <button type="button" class="btn btn-primary nastavi">
+						        	<a href="../homepage.html">Pokušaj Ponovo</a>
+						        </button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+				<br>
+			</div>
+		</article>
+	</section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Media Game</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Brawler|Indie Flower|Comic Sans|Economica' rel='stylesheet'>
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+<body style="background-color: black;">
+<div class="container" id="sadrzaj">
+	<header class="igra-header">
+	<br>
+		<div class="row">
+			<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+			<br>
+				<h5 class="naslov">Čestitamo (ime igrača).</h5><br>
+				<p>
+					Upravo si primljen/a na poziciju novinara - stažiste. <br>
+					Od tvojih sposobnosti verificiranja zavisi da li ćeš dobiti stalni angažman. <br>
+					Kreni sa prvim radnim danom tako što ćeš pročitati mail od urednika. <br>
+				</p>
+			</div>
+			<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+				<h1 class="ime-igre"><a href="../homepage.html">FactChecker</a></h1>
+			</div>
+		</div>			
+	</header>
+			
+	<section>
+		<div class="card">
+			<div class="card-header">
+				<h6 class="card-title">
+				<a href="#" id="procitaj">Pročitaj mail</a>
+				</h6>
+			</div>
+			<div class="card-body">
+				<table class="table">
+					<tbody>
+						<tr>
+							<td colspan="2"><span><i id="mail" class="fa"></i> Od: </span></td>
+							<td colspan="2"><span>UREDNIK</span></td>
+						</tr>
+						<tr>
+							<td colspan="2"><span><i id="user" class="fa" aria-hidden="true"></i> Prima: </span></td>
+							<td colspan="2"><span>Stažista</span></td>			
+						</tr>
+						<tr>
+							<td colspan="2"><span><i id="folder" class="fa" aria-hidden="true"></i> Predmet: </span></td>
+							<td colspan="2"><span>Prvi Zadatak</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<hr>
+				<figure class="figure">
+						<img src="../images/somepicture.png" alt="" class="figure-img img-fluid rounded" width="500px">
+				</figure>
+				<p>
+					Pozdrav,<br> 
+					Kao što znate danas je Vlada Fedracije BiH proglasila vanredno stanje zbog poplava koje su zahvatile našu i susjedne zemlje. 
+					Mi smo upravo na adresu redakcije dobili fotografiju stanja u Maglaju. Provjeri fotografiju koju ti šaljem u nastavku maila i objavi je na našem sajtu. 
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="odgovor">
+		<article>
+			<div class="pitanje">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+						<h6>Da li je ova slika autentična ? </h6>
+						<button type="button" class="btn btn-primary" id="da" onclick="pogresno();playPogresno();" data-toggle="modal" data-target="#tacanOdgovor">Da</button>
+						<audio id="pogresno"></audio>
+						<!-- Modal -->
+						<div class="modal fade" id="tacanOdgovor" tabindex="-1" role="dialog" aria-labelledby="odgovorModal" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="odgovorModal">FactChecker</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+								<div id="razlogZaDa"></div>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+						       <!-- <button type="button" class="btn btn-primary nastavi">
+						        	<a href="igra.html">Nastavi</a>
+						        </button>
+						        -->
+						      </div>
+						    </div>
+						  </div>
+						</div>
+
+						<button type="button" class="btn btn-danger" id="ne" onclick="tacanOdgovor();playTacno();" data-toggle="modal" data-target="#pogresanOdgovor">Ne</button>
+						<audio id="tacno"></audio>
+						<!-- Modal -->
+						<div class="modal fade" id="pogresanOdgovor" tabindex="-1" role="dialog" aria-labelledby="odgModal" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="odgModal">FactChecker</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						      <div class="modal-body">
+								<div id="razlogZaNe"></div>
+						      </div>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+						        <button type="button" class="btn btn-primary nastavi">
+						        	<a href="igra1.html">Nastavi</a>
+						        </button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+						<hr>
+					</div>
+				</div>
+			</div>
+		</article>
+	</section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+</html>
