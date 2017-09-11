@@ -130,7 +130,7 @@ function playTacno(){
 function tacnoK(){
 	let ne = document.getElementById('ne');
 	let da = document.getElementById('da');
-	let razlogZaDa = document.getElementById('kredibilanOdgovor');
+	let razlogZaDa = document.getElementById('nijeKredibilanOdgovor');
 
 	if (da.click) {
 		ne.disabled = true;
@@ -154,7 +154,7 @@ function tacnoK(){
 function pogresnoK(){
 	var ne = document.getElementById('ne');
 	var da = document.getElementById('da');
-	var razlog = document.getElementById('nijeKredibilanOdgovor');
+	var razlog = document.getElementById('kredibilanOdgovor');
 
 	if (ne.click){
 		da.disabled = true;

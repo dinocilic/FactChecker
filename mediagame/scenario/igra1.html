@@ -80,8 +80,8 @@
 			<div class="pitanje">
 				<div class="row">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
-						<button type="button" class="btn btn-primary" id="da" data-toggle="modal" data-target="#kredibilan" onclick="tacnoK();playTacno();">Izvor je kredibilan.</button>
-						<audio id="tacno"></audio>
+						<button type="button" class="btn btn-primary" id="ne" data-toggle="modal" data-target="#kredibilan" onclick="pogresnoK();playPogresno();">Izvor je kredibilan.</button>
+						<audio id="pogresno"></audio>
 						<!-- Modal -->
 						<div class="modal fade" id="kredibilan" tabindex="-1" role="dialog" aria-labelledby="kredibilanOdg" aria-hidden="true">
 						  <div class="modal-dialog" role="document">
@@ -98,15 +98,15 @@
 						      <div class="modal-footer">
 						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
 						       <button type="button" class="btn btn-primary nastavi">
-						        	<a href="#">Nastavi</a>
+						        	<a href="../homepage.html">Pokušaj Ponovo</a>
 						        </button>
 						      </div>
 						    </div>
 						  </div>
 						</div>
 
-						<button type="button" class="btn btn-danger" id="ne" data-toggle="modal" data-target="#nijeKredibilan" onclick="pogresnoK();playPogresno();">Izvor nije kredibilan.</button>
-						<audio id="pogresno"></audio>
+						<button type="button" class="btn btn-danger" id="da" data-toggle="modal" data-target="#nijeKredibilan" onclick="tacnoK();playTacno();">Izvor nije kredibilan.</button>
+						<audio id="tacno"></audio>
 						<!-- Modal -->
 						<div class="modal fade" id="nijeKredibilan" tabindex="-1" role="dialog" aria-labelledby="nijekredibilanOdg" aria-hidden="true">
 						  <div class="modal-dialog" role="document">
@@ -123,7 +123,7 @@
 						      <div class="modal-footer">
 						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
 						       <button type="button" class="btn btn-primary nastavi">
-						        	<a href="../homepage.html">Pokušaj Ponovo</a>
+						        	<a href="#">Nastavi</a>
 						        </button>
 						      </div>
 						    </div>
